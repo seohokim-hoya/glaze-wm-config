@@ -16,3 +16,8 @@
  at line 47 column 15
 [2m2026-03-05T12:24:46.922963Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_rules[0].commands: unrecognized subcommand
  at line 134 column 15
+[2m2026-03-07T14:45:53.633737Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[19].commands: unrecognized subcommand
+ at line 290 column 15
+[2m2026-03-07T14:46:13.178361Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[19].commands: unrecognized subcommand
+ at line 290 column 15
+[2m2026-03-07T14:49:19.417405Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No binding mode found with the name 'resize'.
