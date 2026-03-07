@@ -1,0 +1,131 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+:root {
+  /* Color Palette */
+  --bg-main: rgba(10, 10, 15, 0.4);
+  --bg-pill: rgba(30, 30, 40, 0.5);
+  --bg-pill-hover: rgba(50, 50, 65, 0.6);
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(94, 235, 208, 0.5); /* Soft Cyan/Teal */
+  
+  --text-main: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-accent: #5eebd0;
+  
+  --color-danger: #ff6b6b;
+  --color-success: #51cf66;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  color: var(--text-main);
+  font-family: 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', ui-monospace, monospace;
+  font-size: 13px;
+  overflow: hidden;
+  user-select: none;
+}
+
+#root {
+  height: 100vh;
+  background-color: var(--bg-main);
+  backdrop-filter: blur(16px); /* 글래스모피즘의 핵심 */
+  border-bottom: 1px solid var(--border-light);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.left, .right { display: flex; align-items: center; gap: 12px; }
+.right { justify-content: flex-end; }
+
+i {
+  color: var(--text-muted);
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+/* 좌측 로고 */
+.logo { color: var(--text-accent); font-size: 16px; }
+
+/* 공통 Pill (둥근 박스) 스타일 */
+.pill, .center, .workspace {
+  background: var(--bg-pill);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+/* 워크스페이스 버튼 */
+.workspaces { display: flex; gap: 6px; }
+.workspace {
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.workspace:hover { background: var(--bg-pill-hover); }
+.workspace.displayed { color: var(--text-main); }
+.workspace.focused {
+  background: rgba(94, 235, 208, 0.1);
+  color: var(--text-accent);
+  border: 1px solid var(--border-focus);
+  box-shadow: 0 0 12px rgba(94, 235, 208, 0.15);
+}
+
+/* 중앙 영역 (시간 및 프로세스) */
+.center {
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.center .date { font-weight: 600; letter-spacing: 0.5px; }
+.center .separator { color: var(--text-muted); }
+.center .process {
+  color: var(--text-muted);
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 우측 상태 및 퀀트 봇 */
+.status-pill { gap: 14px; }
+.status-pill span { font-variant-numeric: tabular-nums; }
+.item { display: flex; align-items: center; font-weight: 500; }
+.traffic { font-size: 0.85em; color: var(--text-muted); margin-left: 4px; }
+
+/* 퀀트 봇 전용 스타일 */
+.quant-pill {
+  border-color: rgba(81, 207, 102, 0.3);
+  color: var(--color-success);
+}
+.quant-pill i { color: var(--color-success); }
+.quant-pill.error {
+  border-color: rgba(255, 107, 107, 0.3);
+  color: var(--color-danger);
+}
+.quant-pill.error i { color: var(--color-danger); }
+
+/* 상태 컬러링 */
+.danger-text { color: var(--color-danger); font-weight: bold; }
+.charging { color: var(--color-success); animation: pulse 2s infinite; }
+.muted { color: var(--color-danger); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.percent {
+  display: inline-block;
+  width: 3ch;
+  text-align: right;
+}
