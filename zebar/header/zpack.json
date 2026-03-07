@@ -15,7 +15,9 @@
       "focused": false,
       "resizable": false,
       "transparent": true,
-      "includeFiles": ["**/**"],
+      "includeFiles": [
+        "**/**"
+      ],
       "caching": {
         "defaultDuration": 604800,
         "rules": []
@@ -35,7 +37,7 @@
             "type": "all"
           },
           "dockToEdge": {
-            "enabled": false,
+            "enabled": true,
             "edge": null,
             "windowMargin": "0px"
           }
