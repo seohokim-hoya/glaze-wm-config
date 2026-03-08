@@ -21,3 +21,6 @@
 [2m2026-03-07T14:46:13.178361Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[19].commands: unrecognized subcommand
  at line 290 column 15
 [2m2026-03-07T14:49:19.417405Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No binding mode found with the name 'resize'.
+[2m2026-03-08T07:54:09.412152Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2026-03-08T07:54:19.042241Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2026-03-08T07:54:33.355061Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.

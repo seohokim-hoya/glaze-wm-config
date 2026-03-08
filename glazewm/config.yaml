@@ -2,7 +2,9 @@ general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
   # Example: The below command launches Zebar.
-  startup_commands: ["shell-exec zebar"]
+  startup_commands:
+    # ['shell-exec powershell -Command "Start-Sleep -Seconds 0.2; zebar" ']
+    ["shell-exec zebar"]
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
@@ -149,14 +151,15 @@ window_rules:
         window_class: { not_regex: "OpusApp" }
       - window_process: { equals: "POWERPNT" }
         window_class: { not_regex: "PPTFrameClass" }
+      - window_process: { equals: "zebar" }
 
   # - commands: ["set-floating --centered --width 900px --height 700px"]
   # - commands: ["set-floating --centered"]
   - commands: ["set-tiling"]
     match:
+      - window_process: { regex: "^KakaoTalk$" } # 정확한 값은 Window Spy로 확인
       - window_process: { equals: "zebar" }
         window_title: { regex: "^Settings - Zebar$" }
-      - window_process: { regex: "^KakaoTalk$" } # 정확한 값은 Window Spy로 확인
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
