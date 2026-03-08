@@ -361,3 +361,4 @@ keybindings:
   - commands: ["move --workspace 8", "focus --workspace 8"]
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
+    bindings: ["alt+shift+9"]

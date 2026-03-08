@@ -15,9 +15,7 @@
       "focused": false,
       "resizable": false,
       "transparent": true,
-      "includeFiles": [
-        "**/**"
-      ],
+      "includeFiles": ["**/**"],
       "caching": {
         "defaultDuration": 604800,
         "rules": []
@@ -34,7 +32,7 @@
           "width": "100%",
           "height": "40px",
           "monitorSelection": {
-            "type": "primary"
+            "type": "all"
           },
           "dockToEdge": {
             "enabled": true,
