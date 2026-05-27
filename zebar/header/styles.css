@@ -15,6 +15,8 @@
   
   --color-danger: #ff6b6b;
   --color-success: #51cf66;
+  --color-gold: #f2c94c;
+  --color-nasdaq: #4dabf7;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -96,13 +98,11 @@ i {
   text-overflow: ellipsis;
 }
 
-/* 우측 상태 및 퀀트 봇 */
-.status-pill { gap: 14px; }
-.status-pill span { font-variant-numeric: tabular-nums; }
-.item { display: flex; align-items: center; font-weight: 500; }
-.traffic { font-size: 0.85em; color: var(--text-muted); margin-left: 4px; }
+/* 우측 티커 */
+.right .pill {
+  gap: 6px;
+}
 
-/* 퀀트 봇 전용 스타일 */
 .quant-pill {
   border-color: rgba(81, 207, 102, 0.3);
   color: var(--color-success);
@@ -113,16 +113,29 @@ i {
   color: var(--color-danger);
 }
 .quant-pill.error i { color: var(--color-danger); }
+.nas-pill {
+  border-color: rgba(77, 171, 247, 0.35);
+  color: var(--color-nasdaq);
+}
+.nas-pill i { color: var(--color-nasdaq); }
+.nas-pill.error {
+  border-color: rgba(255, 107, 107, 0.3);
+  color: var(--color-danger);
+}
+.nas-pill.error i { color: var(--color-danger); }
+.gold-pill {
+  border-color: rgba(242, 201, 76, 0.35);
+  color: var(--color-gold);
+}
+.gold-pill i { color: var(--color-gold); }
+.gold-pill.error {
+  border-color: rgba(255, 107, 107, 0.3);
+  color: var(--color-danger);
+}
+.gold-pill.error i { color: var(--color-danger); }
 
 /* 상태 컬러링 */
 .danger-text { color: var(--color-danger); font-weight: bold; }
-.charging { color: var(--color-success); animation: pulse 2s infinite; }
-.muted { color: var(--color-danger); }
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
 
 .percent {
   display: inline-block;
